@@ -116,6 +116,28 @@ slots:
 :u-input{placeholder="Enter your email" class="w-full"}
 ::
 
+### Help icon
+
+Use the `help-icon` prop to display an icon next to the help message.
+
+::component-code
+---
+prettier: true
+ignore:
+  - label
+props:
+  label: Email
+  help: Please enter a valid email address.
+  helpIcon: i-lucide-info
+slots:
+  default: |
+
+    <UInput placeholder="Enter your email" class="w-full" />
+---
+
+:u-input{placeholder="Enter your email" class="w-full"}
+::
+
 ### Error
 
 Use the `error` prop to display an error message below the form control. When used together with the `help` prop, the `error` prop takes precedence.
@@ -139,8 +161,26 @@ slots:
 :u-input{placeholder="Enter your email" class="w-full"}
 ::
 
-::tip{to="/docs/getting-started/theme/design-system#colors"}
-This sets the `color` to `error` on the form control. You can change it globally in your `app.config.ts`.
+### Error icon
+
+Use the `error-icon` prop to display an icon next to the error message.
+
+::component-code
+---
+prettier: true
+ignore:
+  - label
+props:
+  label: Email
+  error: Please enter a valid email address.
+  errorIcon: i-lucide-circle-alert
+slots:
+  default: |
+
+    <UInput placeholder="Enter your email" class="w-full" />
+---
+
+:u-input{placeholder="Enter your email" class="w-full"}
 ::
 
 ### Error pattern
